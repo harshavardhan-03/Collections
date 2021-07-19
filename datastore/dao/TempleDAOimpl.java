@@ -34,18 +34,14 @@ public class TempleDAOimpl implements TempleDAO {
 
 	@Override
 	public TempleDTO findFirstItem() {
-		Iterator <TempleDTO> itr = this.list.iterator();
-		return itr.next();
+		System.out.println("findFirstItem");
+		return this.list.get(0);
 	}
 
 	@Override
 	public TempleDTO findLastItem() {
-		Iterator<TempleDTO> itr = this.list.iterator();
-		TempleDTO lastItem = null;
-		while (itr.hasNext()) {
-			lastItem = itr.next();
-		}
-		return lastItem;
+		System.out.println("findLastItem");
+		return this.list.get(this.list.size()-1);
 	}
 
 	@Override
