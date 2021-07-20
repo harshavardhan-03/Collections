@@ -5,6 +5,8 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
+import com.xworkz.datastore.comparator.KitchenItemNameComparator;
+import com.xworkz.datastore.comparator.KitchenItemPriceDescComparator;
 import com.xworkz.datastore.comparator.KitchenItemUsedForComparator;
 import com.xworkz.datastore.comparator.KitchenItemUsedForComparatorDesc;
 import com.xworkz.datastore.dto.KitchenItemDTO;
