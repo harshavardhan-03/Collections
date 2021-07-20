@@ -23,22 +23,18 @@ public class KitchenItemDTOTester {
 		for (KitchenItemDTO kitchenItem : collection1) {
 			System.out.println(kitchenItem);
 		}
-//		System.out.println(dao.findAllSortByUsedFor());
 		Collection<KitchenItemDTO> collection2 = dao.findAllSortByUsedForDesc();
 		for (KitchenItemDTO kitchenItem : collection2) {
 			System.out.println(kitchenItem);
 		}
-//		System.out.println(dao.findAllSortByUsedForDesc());
 		Collection<KitchenItemDTO> collection3 = dao.findAllSortByName();
 		for (KitchenItemDTO kitchenItem : collection3) {
 			System.out.println(kitchenItem);
 		}
-//		System.out.println(dao.findAllSortByName());
 		Collection<KitchenItemDTO> collection4 = dao.findAllSortByPriceDesc();
 		for (KitchenItemDTO kitchenItem : collection4) {
 			System.out.println(kitchenItem);
 		}
-//		System.out.println(dao.findAllSortByPriceDesc());
 		
 	}
 
