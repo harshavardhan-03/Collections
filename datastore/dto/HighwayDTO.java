@@ -2,7 +2,7 @@ package com.xworkz.datastore.dto;
 
 import java.io.Serializable;
 
-public class HighwayDTO implements Serializable{
+public class HighwayDTO implements Serializable, Comparable<HighwayDTO>{
 	private int id;
 	private int number;
 	private HighwayType type;
@@ -25,6 +25,16 @@ public class HighwayDTO implements Serializable{
 		this.length = length;
 		this.condition = condition;
 		this.contractCompany = contractCompany;
+	}
+	
+	@Override
+	public int compareTo(HighwayDTO num) {
+		double max = num.getLength();
+		if(this.length == max) return 0;
+		if(this.length > max) return 1;
+		if(this.length < max) return -1;
+	      
+		return 0;
 	}
 
 	public int getId() {
@@ -86,11 +96,7 @@ public class HighwayDTO implements Serializable{
 	
 	@Override
 	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
 		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
 			return false;
 		HighwayDTO other = (HighwayDTO) obj;
 		if (condition != other.condition)
@@ -120,7 +126,5 @@ public class HighwayDTO implements Serializable{
 				+ stateName + ", length=" + length + ", condition=" + condition + ", contractCompany=" + contractCompany
 				+ "]";
 	}
-	
-	
 	
 }
