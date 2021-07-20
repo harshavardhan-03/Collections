@@ -47,7 +47,7 @@ public class HighwayDAOimpl implements HighwayDAO{
 		Iterator<HighwayDTO> highwayType = this.list.iterator();
 		while(highwayType.hasNext()) {
 			HighwayDTO highwayDTO = highwayType.next();
-			if(highwayDTO.getHighwayType() == type) {
+			if(highwayDTO.getHighwayType().equals(type)) {
 				collection.add(highwayDTO);	
 				}
 		}
